@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atom vs Neurone</title>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Georgia, serif;
+background:#f6f4ef;
+color:#222;
+line-height:1.8;
+}
+
+header{
+background:#fff;
+border-bottom:1px solid #ddd;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+}
+
+.logo{
+font-weight:bold;
+letter-spacing:2px;
+}
+
+.menu a{
+text-decoration:none;
+color:#333;
+margin-left:18px;
+}
+
+.hero{
+background:#0b0b0b;
+color:white;
+min-height:90vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px;
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.main-logo{
+font-size:5rem;
+line-height:1.1;
+letter-spacing:4px;
+}
+
+.main-logo span{
+font-size:2rem;
+color:#7fffb0;
+}
+
+.hero-text{
+margin-top:25px;
+font-size:1.15rem;
+color:#d9d9d9;
+}
+
+.hero-btn{
+display:inline-block;
+margin-top:30px;
+padding:14px 30px;
+background:white;
+color:black;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+}
+
+.section{
+padding:70px 10%;
+}
+
+.section-title{
+text-align:center;
+font-size:2rem;
+margin-bottom:35px;
+}
+
+.search-box{
+max-width:700px;
+margin:auto;
+}
+
+.search-box input{
+width:100%;
+padding:15px;
+font-size:1rem;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+.categories{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:40px;
+}
+
+/* क्याटगोरी कार्डलाई लिङ्क बक्स बनाउन थपिएको स्टाइल */
+.category-link {
+text-decoration: none;
+color: inherit;
+display: block;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+transition: transform 0.2s;
+height: 100%;
+}
+
+.card:hover {
+transform: translateY(-5px);
+background: #fffdf9;
+}
+
+.card h3{
+margin-bottom:10px;
+color:#0f5ea8;
+}
+
+.articles{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+/* फिचर्ड आर्टिकल कार्डलाई लिङ्क बक्स बनाउन थपिएको स्टाइल */
+.article-link {
+text-decoration: none;
+color: inherit;
+display: block;
+}
+
+.article{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+transition: transform 0.2s;
+}
+
+.article:hover {
+transform: translateY(-5px);
+}
+
+.article h3 {
+color: #111;
+margin-bottom: 10px;
+}
+
+.article:hover h3 {
+color: #0f5ea8;
+}
+
+.quote{
+background:#0b0b0b;
+color:white;
+text-align:center;
+padding:70px 20px;
+font-size:1.4rem;
+font-style:italic;
+}
+
+.about-preview{
+max-width:900px;
+margin:auto;
+text-align:center;
+}
+
+.contact-preview{
+text-align:center;
+}
+
+footer{
+background:#fff;
+border-top:1px solid #ddd;
+text-align:center;
+padding:30px;
+margin-top:40px;
+}
+
+@media(max-width:768px){
+.menu{
+display:none;
+}
+.main-logo{
+font-size:3rem;
+}
+.main-logo span{
+font-size:1.4rem;
+}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="navbar">
+<div class="logo">ATOM vs NEURONE</div>
+<div class="menu">
+<a href="index.html">Home</a>
+<a href="article.html">Articles</a>
+<a href="#categories-section">Categories</a>
+<a href="#about-section">About</a>
+<a href="#contact-section">Contact</a>
+</div>
+</div>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<h1 class="main-logo">ATOM<br><span>VS</span><br>NEURONE</h1>
+<p class="hero-text">
+From atoms to galaxies. From neurons to consciousness.
+A platform dedicated to science, psychology, philosophy, history, culture and meaningful ideas.
+</p>
+<a href="article.html" class="hero-btn">Start Reading</a>
+</div>
+</section>
+
+<section class="section">
+<h2 class="section-title">Search Knowledge</h2>
+<div class="search-box">
+<input type="text" placeholder="Search articles...">
+</div>
+</section>
+
+<section class="section" id="categories-section">
+<h2 class="section-title">Explore Categories</h2>
+<div class="categories">
+
+<a href="article.html?cat=current-issues" class="category-link">
+<div class="card">
+<h3>Current Issues</h3>
+<p>Understanding modern events and challenges.</p>
+</div>
+</a>
+
+<a href="article.html?cat=general-knowledge" class="category-link">
+<div class="card">
+<h3>General Knowledge</h3>
+<p>Knowledge beyond textbooks.</p>
+</div>
+</a>
+
+<a href="article.html?cat=fact-checks" class="category-link">
+<div class="card">
+<h3>Fact Checks</h3>
+<p>Evidence before belief.</p>
+</div>
+</a>
+
+<a href="article.html?cat=science-innovation" class="category-link">
+<div class="card">
+<h3>Science & Innovation</h3>
+<p>Technology and scientific discoveries.</p>
+</div>
+</a>
+
+<a href="article.html?cat=human-psychology" class="category-link">
+<div class="card">
+<h3>Human Psychology</h3>
+<p>The science of behavior and thought.</p>
+</div>
+</a>
+
+<a href="article.html?cat=history-geography" class="category-link">
+<div class="card">
+<h3>History & Geography</h3>
+<p>Our world and its past.</p>
+</div>
+</a>
+
+<a href="article.html?cat=culture-religion" class="category-link">
+<div class="card">
+<h3>Culture & Religion</h3>
+<p>Traditions, beliefs and civilizations.</p>
+</div>
+</a>
+
+<a href="article.html?cat=philosophy-motivation" class="category-link">
+<div class="card">
+<h3>Philosophy & Motivation</h3>
+<p>Meaning, purpose and personal growth.</p>
+</div>
+</a>
+
+</div>
+</section>
+
+<section class="section">
+<h2 class="section-title">Featured Articles</h2>
+<div class="articles">
+
+<a href="iran-israel.html" class="article-link">
+<div class="article">
+<h3>The Future of Human Intelligence</h3>
+<p>Explore AI, neuroscience and the future of cognition.</p>
+</div>
+</a>
+
+<a href="iran-israel.html" class="article-link">
+<div class="article">
+<h3>The Iran-Israel Conflict</h3>
+<p>The story of the universe and geopolitical shifts from its earliest moments.</p>
+</div>
+</a>
+
+<a href="iran-israel.html" class="article-link">
+<div class="article">
+<h3>Why Humans Believe</h3>
+<p>A journey through psychology and culture.</p>
+</div>
+</a>
+
+</div>
+</section>
+
+<section class="quote">
+<p>"From Matter to Meaning. From Atoms to Consciousness."</p>
+</section>
+
+<section class="section" id="about-section">
+<div class="about-preview">
+<h2 class="section-title">About Atom vs Neurone</h2>
+<p>A platform for deep reading, critical thinking and curiosity. Designed for people who prefer knowledge over endless scrolling.</p>
+</div>
+</section>
+
+<section class="section" id="contact-section">
+<div class="contact-preview">
+<h2 class="section-title">Contact</h2>
+<p>Paudel & Team</p>
+<p>Pang, Parbat, Nepal</p>
+<p>Email: ramchandra252p@gmail.com</p>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Atom vs Neurone</p>
+<p>Exploring the Universe Outside and the Mind Within.</p>
+</footer>
+
+</body>
+</html>
