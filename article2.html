@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Articles - Atom vs Neurone</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background: #f6f4ef;
+    color: #222;
+    line-height: 1.8;
+}
+
+header {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+}
+
+.logo a {
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: #222;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 18px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #111;
+    border-bottom: 2px solid #0b0b0b;
+    padding-bottom: 15px;
+}
+
+/* एकपछि अर्को आर्टिकल देखिने बाहिरी लिस्ट */
+.articles-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* आर्टिकलहरू बीचको दूरी */
+}
+
+/* प्रत्येक आर्टिकलको बक्स (One by One) */
+.article-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.article-card:hover {
+    transform: translateY(-3px);
+}
+
+.article-category {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #0f5ea8;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.article-title {
+    font-size: 1.8rem;
+    color: #111;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.article-summary {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.read-more-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #0b0b0b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.read-more-btn:hover {
+    background: #333;
+}
+
+footer {
+    background: #fff;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    padding: 30px;
+    margin-top: 60px;
+}
+
+@media(max-width:768px){
+    .menu { display: none; }
+    .page-title { font-size: 2rem; }
+    .article-title { font-size: 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html">ATOM vs NEURONE</a>
+        </div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="article.html">Articles</a>
+            <a href="#">Categories</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <h1 class="page-title">Latest Articles</h1>
+
+    <!-- यहाँ आर्टिकलहरू एकपछि अर्को देखिन्छन् -->
+    <div class="articles-list">
+
+        <!-- आर्टिकल १ -->
+        <article class="article-card">
+            <div class="article-category">Current Issues</div>
+            <h2 class="article-title">The Shadow War: Iran and Israel Conflict</h2>
+            <p class="article-summary">
+                For decades, the conflict between Iran and Israel was fought in the shadows. Discover how recent missile strikes are reshaping the geopolitical landscape of the Middle East.
+            </p>
+            <a href="iran-israel.html" class="read-more-btn">Read Full Article →</a>
+        </article>
+
+        <!-- आर्टिकल २ -->
+        <article class="article-card">
+            <div class="article-category">Science & Innovation</div>
+            <h2 class="article-title">The Future of Human Intelligence and AI</h2>
+            <p class="article-summary">
+                Will Artificial Intelligence eventually surpass human consciousness? Explore the fascinating intersections of neuroscience, computation, and the future of human mind.
+            </p>
+            <a href="future-ai.html" class="read-more-btn">Read Full Article →</a>
+        </article>
+
+        <!-- आर्टिकल ३ -->
+        <article class="article-card">
+            <div class="article-category">General Knowledge</div>
+            <h2 class="article-title">From Atoms to Galaxies: The Cosmic Story</h2>
+            <p class="article-summary">
+                A deep dive into how the universe expanded from subatomic particles into gigantic galaxies. Understanding our place in the vast, beautiful cosmic arena.
+            </p>
+            <a href="cosmic-story.html" class="read-more-btn">Read Full Article →</a>
+        </article>
+
+    </div>
+</main>
+
+<footer>
+    <p>© 2026 Atom vs Neurone</p>
+    <p>Exploring the Universe Outside and the Mind Within.</p>
+</footer>
+
+</body>
+</html>
